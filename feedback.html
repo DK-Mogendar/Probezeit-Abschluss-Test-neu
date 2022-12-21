@@ -18,6 +18,105 @@
 </head>
 
 <body>
+    <!--navigations Leiste-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Abschlusstest</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!--Contendbereich mit drie Spalten-->
+    <div>
+        <div id="emoji-container">
+            <i id="emoji"onclick="alert('you clicked me!')" onmouseover="mOver()" onmouseout="mOut(this)" class="bi bi-emoji-heart-eyes-fill"></i>
+        </div>
+        <script>
+            function mOver() {
+                let emojiObject = document.getElementById("emoji");
+                emojiObject.style.color = 'purple';
+                emojiObject.style.fontSize = '150px';
+                
+            }
+            function mOut(element) {
+                element.style.color ='blue';
+                element.style.fontSize ='100px';
+                element.style.background = 'black';
+            }
+        </script>
+    <!--ist nur ein Beispiel für eine übersichtliche Daestellung-->
+        <!--<div id="emoji" onclick="alert('you clicked me!')" 
+                        onmouseover="mOver()" 
+                        onmouseout="mOut(this)" 
+                        class="bi bi-emoji-smile">
+        </div>-->
+    
+        </div>
+
+
+        <div class="alert alert-success" role="alert">
+            <script>
+                /* a)  Vorbereitung: Lege zwei Buttons jeweils mit Identifikator (id) 
+                und Beschriftung an.
+                Aufgabe: Auf Mausklick gib id und Beschriftung des gewählten Buttons 
+                in der Konsole des Browsers aus. */
+        
+            function logButtonIdentification(element){
+                console.log(element.id, element.innerText);
+            }
+            </script>
+        
+            <button type="button"
+                    class="btn btn-success"
+                    id="defaultButton"
+                    onclick="logButtonIdentification(this);">good!</button>
+            
+        
+            <button type="button"
+                    class="btn btn-danger"
+                    id="successButton"
+                    onclick="logButtonIdentification(this);">bad!</button>
+        </div>
+    </div>
+    
+        <!--Footer-->
+        <footer>
+            <p>Author: Daniel Köstinger</p>
+            <p><a href="daniel00007.dks@gmail.comm">Daniel mail</a></p>
+          </footer>
+      </div>
+    </div>
+  </nav>
     
 </body>
 </html>
